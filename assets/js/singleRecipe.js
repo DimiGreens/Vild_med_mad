@@ -62,6 +62,22 @@ function renderSingleRecipe(data){
 
         const tertiaryIngrediense = Object.values(recipe.acf.tertiary_ingredients).some(val => val.trim() !== "");
         console.log('tertiaryIngrediense:', tertiaryIngrediense);
+        let tertiaryList;
+        if(tertiaryIngrediense){
+            const tertiaryIngredienseList = document.createElement("ul");
+            tertiaryList = tertiaryIngredienseList;
+                Object.entries(recipe.acf.tertiary_ingredients).forEach(([key, value]) => {
+                    if(value !== ""){
+                        const tertiaryIngredienses = document.createElement("li");
+                        tertiaryIngredienses.textContent = value;
+
+                        tertiaryIngredienses.addEventListener("click", () => {
+                        tertiaryIngredienses.classList.toggle("checker");
+                        })
+                        tertiaryIngredienseList.append(tertiaryIngredienses);
+                    }
+                })
+        }
 
         Object.entries(recipe.acf.primary_procedure).forEach(([key, value]) => {
             if(value !== ""){
@@ -77,6 +93,6 @@ function renderSingleRecipe(data){
         })
 
 
-        singleRecipeEl.append(newRecipeTitel, newRecipeImage, recipeIngredientList, secondaryList, recipeProcedure)
+        singleRecipeEl.append(newRecipeTitel, newRecipeImage, recipeIngredientList, secondaryList, tertiaryList, recipeProcedure)
     })
 }

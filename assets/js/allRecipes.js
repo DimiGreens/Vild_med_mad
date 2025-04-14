@@ -5,7 +5,7 @@ const getRealImageUrlsPlus = "&acf_format=standard";
 
 const recipesEl = document.querySelector(".allRecipes");
 
-fetch(domain + endPoint + getRealImageUrls)
+fetch(domain + endPoint + "?per_page=40" + getRealImageUrlsPlus)
 .then(res => res.json())
 .then(data => {
     console.log('data:', data);
