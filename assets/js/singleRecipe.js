@@ -19,7 +19,7 @@ fetch(domain + endPoint + "?slug=" + slug + getRealImageUrlsPlus)
 
 function renderSingleRecipe(data){
     data.forEach(recipe => {
-        const newRecipeTitel = document.createElement("h2");
+        const newRecipeTitel = document.createElement("h1");
         newRecipeTitel.textContent = recipe.acf.titel;
 
         const newRecipeImage = document.createElement("img");
@@ -41,6 +41,28 @@ function renderSingleRecipe(data){
             }
         })
 
+        const secondaryIngrediense = Object.values(recipe.acf.secondary_ingredients).some(val => val.trim() !== "");
+        console.log('secondaryIngrediense:', secondaryIngrediense);
+        let secondaryList;
+        if(secondaryIngrediense){
+            const secondaryIngredienseList = document.createElement("ul");
+            secondaryList = secondaryIngredienseList;
+                Object.entries(recipe.acf.secondary_ingredients).forEach(([key, value]) => {
+                    if(value !== ""){
+                        const secondaryIngredienses = document.createElement("li");
+                        secondaryIngredienses.textContent = value;
+
+                        secondaryIngredienses.addEventListener("click", () => {
+                        secondaryIngredienses.classList.toggle("checker");
+                        })
+                        secondaryIngredienseList.append(secondaryIngredienses);
+                    }
+                })
+        }
+
+        const tertiaryIngrediense = Object.values(recipe.acf.tertiary_ingredients).some(val => val.trim() !== "");
+        console.log('tertiaryIngrediense:', tertiaryIngrediense);
+
         Object.entries(recipe.acf.primary_procedure).forEach(([key, value]) => {
             if(value !== ""){
                 const ingredientSteps = document.createElement("li");
@@ -55,6 +77,6 @@ function renderSingleRecipe(data){
         })
 
 
-        singleRecipeEl.append(newRecipeTitel, newRecipeImage, recipeIngredientList, recipeProcedure)
+        singleRecipeEl.append(newRecipeTitel, newRecipeImage, recipeIngredientList, secondaryList, recipeProcedure)
     })
 }
