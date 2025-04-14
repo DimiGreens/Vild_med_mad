@@ -91,8 +91,8 @@ function renderSingleRecipe(data){
                 recipeProcedure.append(ingredientSteps);
             }
         })
+        
+            singleRecipeEl.append(newRecipeTitel, newRecipeImage, recipeIngredientList, secondaryList, tertiaryList, recipeProcedure)
 
-
-        singleRecipeEl.append(newRecipeTitel, newRecipeImage, recipeIngredientList, secondaryList, tertiaryList, recipeProcedure)
     })
 }
