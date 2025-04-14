@@ -1,0 +1,15 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+:root{
+    --healthyGreen: #89912E;
+    --sunnyYellow: #F7C272;
+    --fakeBlack: #414141;
+    --cream: #FBF5E9;
+
+    --smSpacer: 1.5rem;
+    --mdSpacer: 3rem;
+    --lrgSpacer: 6rem;
+    --xlSpacer: 9rem;
+}
