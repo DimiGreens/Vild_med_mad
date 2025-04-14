@@ -13,3 +13,13 @@
     --lrgSpacer: 6rem;
     --xlSpacer: 9rem;
 }
+
+li{
+    cursor: pointer;
+}
+
+.checker{
+    cursor: pointer;
+    color: lightgrey;
+    text-decoration: line-through;
+}
