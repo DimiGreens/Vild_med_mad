@@ -22,24 +22,25 @@ fetch(domain + endPoint + "?per_page=40" + getRealImageUrlsPlus)
 })
 .catch(err => console.log(err))
 
+let userDiet = "";
+let userType = "";
+let userTime = "";
 
-let userDiet;
-let userTime;
-let userType;
+// '?' er ligesom if-else, bare en kortere version
 
 dietSelectorEl.addEventListener("change", () => {
-    userDiet = "&diet=" + dietSelectorEl.value;
-    console.log('userDiet:', userDiet);
+    const value = dietSelectorEl.value;
+    userDiet = value ? "&diet=" + value : "";
 })
 
 timeSelectorEl.addEventListener("change", () => {
-    userTime = "&tilberedningstid=" + timeSelectorEl.value;
-    console.log('userTime:', userTime)
+    const value = timeSelectorEl.value;
+    userTime = value ? "&tilberedningstid=" + value : "";
 })
 
 typeSelectorEl.addEventListener("change", () => {
-    userType = "&maltidstype=" + typeSelectorEl.value;
-    console.log('userType:', userType)
+    const value = typeSelectorEl.value;
+    userType = value ? "&maltidstype=" + value : "";
 })
 
 anvendKnapEl.addEventListener("click", () => {
