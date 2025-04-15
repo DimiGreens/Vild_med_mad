@@ -31,18 +31,48 @@ nav {
     justify-content: space-between;
     gap: 50px;
     align-items: center;
+padding-left: var(--smSpacer);
+padding-right: var(--smSpacer);
+
+    
 }
 
 nav a {
     color: var(--fakeBlack);
+    padding: var(--smSpacer);
+  text-align: center;
+  text-decoration: none;
+    display: inline-block;
+    font-size: 1.2rem;
+    border-radius: 5px;
+
 }
 
 input {
-    width: 30%;
+    width: 15%;
     float: right;
+    padding: 0;
+    border-radius: var(--smSpacer);
+    margin: var(--smSpacer);
+    border: 1px solid var(--fakeBlack);
+    height: var(--mdSpacer);
+    text-align: center;
+    background-color: white;
 }
 
 .navbar img {
     width: var(--xlSpacer);
     float: left;
+
+}
+.active {
+
+    color: var(--fakeBlack);
+        text-decoration: underline;
+}
+
+/* hr styling */
+header hr{
+    margin-left: var(--smSpacer);
+    margin-right: var(--smSpacer);
 }
