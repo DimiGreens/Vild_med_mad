@@ -72,6 +72,24 @@ input {
     text-decoration: underline;
 }
 
+.searchBarContainer{
+    position: relative;
+}
+
+.searchBarContainer input{
+    width: 100%;
+    border-radius: var(--smSpacer);
+}
+
+  .searchBarContainer i {
+      position: absolute;
+      top: 50%;
+      left: 150px;
+      transform: translateY(-50%);
+      color: var(--fakeBlack);
+      background-color: #FFF;
+  }
+
 /* hr styling */
 header hr{
     margin-left: var(--smSpacer);
