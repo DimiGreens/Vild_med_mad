@@ -26,24 +26,23 @@ li {
 }
 
 /* styling til navbar */
-.navbar {
+nav {
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
     align-items: center;
-    padding: 1rem 2rem;
-    display: grid;
-    grid-template-columns: 0.5fr, 1fr, 2fr;
-    grid-template-rows: 1fr;
 }
 
-.navbar a {
+nav a {
+    color: var(--fakeBlack);
+}
+
+input {
+    width: 30%;
+    float: right;
+}
+
+.navbar img {
+    width: var(--xlSpacer);
     float: left;
-    display: block;
-    color: black;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: underline;
-    font-size: 17px;
-}
-
-.Searchbar input {
-    grid-column: 2, 3;
 }
