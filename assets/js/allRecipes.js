@@ -5,6 +5,12 @@ const getRealImageUrlsPlus = "&acf_format=standard";
 
 const recipesEl = document.querySelector(".allRecipes");
 
+const userSelectedDiet = document.querySelector("#Diets");
+
+userSelectedDiet.addEventListener("change", () => {
+    console.log(userSelectedDiet.value);
+});
+
 fetch(domain + endPoint + "?per_page=40" + getRealImageUrlsPlus)
 .then(res => res.json())
 .then(data => {
@@ -12,6 +18,7 @@ fetch(domain + endPoint + "?per_page=40" + getRealImageUrlsPlus)
     renderRecipe(data);
 })
 .catch(err => console.log(err))
+
 
 function renderRecipe(data){
     data.forEach(recipe => {
