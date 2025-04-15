@@ -24,75 +24,93 @@ function renderSingleRecipe(data){
 
         const newRecipeImage = document.createElement("img");
         newRecipeImage.src = recipe.acf.picture.sizes.large;
-
+        
         const recipeIngredientList = document.createElement("ul");
         const recipeProcedure = document.createElement("ol");
-
+        
+        recipeIngredientList.classList.add("primaryIngredienseList");
         Object.entries(recipe.acf.primary_ingredients).forEach(([key, value]) => {
             if(value !== ""){
                 const ingredientItem = document.createElement("li");
                 ingredientItem.textContent = value;
-
+                
                 ingredientItem.addEventListener("click", () => {
                     ingredientItem.classList.toggle("checker");
                 })
-
+                
                 recipeIngredientList.append(ingredientItem);
             }
         })
-
+        
         const secondaryIngrediense = Object.values(recipe.acf.secondary_ingredients).some(val => val.trim() !== "");
         console.log('secondaryIngrediense:', secondaryIngrediense);
         let secondaryList;
         if(secondaryIngrediense){
             const secondaryIngredienseList = document.createElement("ul");
             secondaryList = secondaryIngredienseList;
-                Object.entries(recipe.acf.secondary_ingredients).forEach(([key, value]) => {
-                    if(value !== ""){
-                        const secondaryIngredienses = document.createElement("li");
-                        secondaryIngredienses.textContent = value;
-
-                        secondaryIngredienses.addEventListener("click", () => {
+            secondaryIngredienseList.classList.add("secondaryIngredienseList");
+            Object.entries(recipe.acf.secondary_ingredients).forEach(([key, value]) => {
+                if(value !== ""){
+                    const secondaryIngredienses = document.createElement("li");
+                    secondaryIngredienses.textContent = value;
+                    
+                    secondaryIngredienses.addEventListener("click", () => {
                         secondaryIngredienses.classList.toggle("checker");
-                        })
-                        secondaryIngredienseList.append(secondaryIngredienses);
-                    }
-                })
+                    })
+                    secondaryIngredienseList.append(secondaryIngredienses);
+                }
+            })
         }
-
+        
         const tertiaryIngrediense = Object.values(recipe.acf.tertiary_ingredients).some(val => val.trim() !== "");
         console.log('tertiaryIngrediense:', tertiaryIngrediense);
         let tertiaryList;
         if(tertiaryIngrediense){
             const tertiaryIngredienseList = document.createElement("ul");
             tertiaryList = tertiaryIngredienseList;
-                Object.entries(recipe.acf.tertiary_ingredients).forEach(([key, value]) => {
-                    if(value !== ""){
-                        const tertiaryIngredienses = document.createElement("li");
-                        tertiaryIngredienses.textContent = value;
-
-                        tertiaryIngredienses.addEventListener("click", () => {
+            tertiaryIngredienseList.classList.add("tertiaryIngredienseList");
+            Object.entries(recipe.acf.tertiary_ingredients).forEach(([key, value]) => {
+                if(value !== ""){
+                    const tertiaryIngredienses = document.createElement("li");
+                    tertiaryIngredienses.textContent = value;
+                    
+                    tertiaryIngredienses.addEventListener("click", () => {
                         tertiaryIngredienses.classList.toggle("checker");
-                        })
-                        tertiaryIngredienseList.append(tertiaryIngredienses);
-                    }
-                })
+                    })
+                    tertiaryIngredienseList.append(tertiaryIngredienses);
+                }
+            })
         }
-
+        
+        
         Object.entries(recipe.acf.primary_procedure).forEach(([key, value]) => {
             if(value !== ""){
                 const ingredientSteps = document.createElement("li");
                 ingredientSteps.textContent = value;
-
+                
                 ingredientSteps.addEventListener("click", () => {
                     ingredientSteps.classList.toggle("checker");
                 })
-
+                
                 recipeProcedure.append(ingredientSteps);
             }
         })
+
+        const recipeList = document.createElement("div");
         
-            singleRecipeEl.append(newRecipeTitel, newRecipeImage, recipeIngredientList, secondaryList, tertiaryList, recipeProcedure)
+        if(recipeIngredientList){
+            recipeList.append(recipeIngredientList)
+        }
+
+        if(secondaryList){
+            recipeList.appendChild(secondaryList)
+        }
+        
+        if(tertiaryList){
+            recipeList.appendChild(tertiaryList)
+        }
+
+            singleRecipeEl.append(newRecipeTitel, newRecipeImage, recipeList, recipeProcedure)
 
     })
 }
