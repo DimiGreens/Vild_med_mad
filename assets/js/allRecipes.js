@@ -8,6 +8,7 @@ const recipesEl = document.querySelector(".allRecipes");
 
 const dietSelectorEl = document.querySelector("#Diets");
 const timeSelectorEl = document.querySelector("#Time");
+const typeSelectorEl = document.querySelector("#Type");
 
 const buttonEl = document.querySelector("#filterButton");
 const anvendKnapEl = document.querySelector("#anvendKnap");
@@ -24,6 +25,7 @@ fetch(domain + endPoint + "?per_page=40" + getRealImageUrlsPlus)
 
 let userDiet;
 let userTime;
+let userType;
 
 dietSelectorEl.addEventListener("change", () => {
     userDiet = "&diet=" + dietSelectorEl.value;
@@ -35,6 +37,11 @@ timeSelectorEl.addEventListener("change", () => {
     console.log('userTime:', userTime)
 })
 
+typeSelectorEl.addEventListener("change", () => {
+    userType = "&maltidstype=" + typeSelectorEl.value;
+    console.log('userType:', userType)
+})
+
 anvendKnapEl.addEventListener("click", () => {
     let filteredUrl = domain + endPoint + "?per_page=40" + getRealImageUrlsPlus;
     if(userDiet){
@@ -42,6 +49,9 @@ anvendKnapEl.addEventListener("click", () => {
     }
     if(userTime){
         filteredUrl += userTime;
+    }
+    if(userType){
+        filteredUrl += userType;
     }
     fetch(filteredUrl)
     .then(res => res.json())
