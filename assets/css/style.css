@@ -1,9 +1,9 @@
-*{
+* {
     font-family: Arial, Helvetica, sans-serif;
     background-color: var(--cream);
 }
 
-:root{
+:root {
     --healthyGreen: #89912E;
     --sunnyYellow: #F7C272;
     --fakeBlack: #414141;
@@ -15,24 +15,25 @@
     --xlSpacer: 9rem;
 }
 
-li{
+li {
     cursor: pointer;
 }
 
-.checker{
+.checker {
     cursor: pointer;
     color: lightgrey;
     text-decoration: line-through;
 }
 
 /* styling til navbar */
-.navbar{
+.navbar {
     align-items: center;
     padding: 1rem 2rem;
     display: grid;
-    grid-template-columns: 1fr, 2fr;
+    grid-template-columns: 0.5fr, 1fr, 2fr;
     grid-template-rows: 1fr;
 }
+
 .navbar a {
     float: left;
     display: block;
@@ -42,6 +43,7 @@ li{
     text-decoration: underline;
     font-size: 17px;
 }
-.Searchbar input{
-    float: right;
+
+.Searchbar input {
+    grid-column: 2, 3;
 }
