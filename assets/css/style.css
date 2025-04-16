@@ -86,3 +86,25 @@ footer{
     display: flex;
     justify-content: space-between;
 }
+
+/* Grid styling opskrift.html */
+.singleRecipe{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    margin: var(--xlSpacer);
+    gap: 20px;
+}
+
+.singleRecipe img{
+    width: 100%;
+    grid-column-start: 2, -1;
+    grid-row: 2;
+    
+}
+
+.singleRecipe div ul{}
+
+
+
+
