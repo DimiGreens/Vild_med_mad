@@ -74,6 +74,7 @@ input {
 
 .searchBarContainer{
     position: relative;
+    max-width: 20%;
 }
 
 .searchBarContainer input{
@@ -163,7 +164,6 @@ footer{
 .button{
     background-color: var(--healthyGreen);
     color: white;
-    border: none;
     padding-left: var(--lrgSpacer);
     padding-right: var(--lrgSpacer);
     padding-top: var(--smSpacer);
@@ -173,5 +173,52 @@ footer{
     font-size: var(--smSpacer);
     align-items: center;
     margin-top: var(--mdSpacer);
-    margin-bottom: var(--xlSpacer);
+    max-width: 20rem;
+}
+.ButtonLowOp{
+        /* background-color: var(--healthyGreen); */
+            color: var(--fakeBlack);
+            padding-left: var(--mdSpacer);
+            padding-right: var(--mdSpacer);
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+            cursor: pointer;
+            border-radius: 10rem;
+            font-size: 1.5rem;
+            /* align-items: center; */
+            margin-top: var(--mdSpacer);
+            margin-bottom: var(--xlSpacer);
+            max-width: 15rem;
+
+}
+/* select styling */
+select{
+    background-color: var(--cream);
+    color: var(--fakeBlack);
+    border: 1px solid var(--fakeBlack);
+    padding: 0.5rem;
+    border-radius: 10rem;
+    font-size: 1.2rem;
+    margin-top: var(--smSpacer);
+    margin-bottom: var(--smSpacer);
+    width: 20%;
+    text-align: center;
+    cursor: pointer;
+}
+.filter{
+    text-align: center;
+}
+/* on page seach styling */
+.pageSearchBar{
+display: flex;
+justify-content: center;
+padding-bottom: 0;
+margin: auto;
+
+}
+.filterButton{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
