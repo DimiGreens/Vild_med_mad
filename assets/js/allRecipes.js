@@ -27,6 +27,9 @@ let userType = "";
 let userTime = "";
 
 // '?' er ligesom if-else, bare en kortere version
+// Et eller andet
+
+console.log("Hej");
 
 dietSelectorEl.addEventListener("change", () => {
     const value = dietSelectorEl.value;
