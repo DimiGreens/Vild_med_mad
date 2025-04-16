@@ -25,29 +25,46 @@
             <hr>
     </header>
     <main>
-      <select name="Diæt" id="Diets">
-        <option value="" selected>Vælg</option>
-        <option value="12">Æggefri</option>
-        <option value="9">Glutenfri</option>
-        <option value="21">Carnivor</option>
-      </select>
-
-      <select name="Tilbedredelsestid" id="Time">
-        <option value="" selected>Vælg</option>
-        <option value="6">Kort</option>
-        <option value="7">Mellem</option>
-        <option value="8">Lang</option>
-      </select>
-
-      <select name="Type" id="Type">
-        <option value="" selected>Vælg</option>
-        <option value="29">Forret</option>
-        <option value="30">Hovedret</option>
-        <option value="31">Dessert</option>
-      </select>
-
-      <button id="anvendKnap">Anvend</button>
-      <button id="filterButton">Fjern filter</button>
+      <section>
+        <article class="velkommenText">
+          <h2>Alle opskrifter</h2>
+          <p>
+            Dyk ned i en verden af lækre og smagsfulde opskrifter, hvor vi lover, at du finder inspiration til dit næste måltid. Gå
+            på opdagelse i et univers fyldt med mad.
+          </p>
+        </article>
+      </section>
+      <div class="pageSearchBar" >
+        <input type="text" placeholder="Søg efter opskrift">
+      </div>
+      </div>
+      <br>
+      <div class="filter"> 
+        <select name="Diæt" id="Diets">
+          <option value="" selected>Vælg</option>
+          <option value="12">Æggefri</option>
+          <option value="9">Glutenfri</option>
+          <option value="21">Carnivor</option>
+        </select>
+  
+        <select name="Tilbedredelsestid" id="Time">
+          <option value="" selected>Vælg</option>
+          <option value="6">Kort</option>
+          <option value="7">Mellem</option>
+          <option value="8">Lang</option>
+        </select>
+  
+        <select name="Type" id="Type">
+          <option value="" selected>Vælg</option>
+          <option value="29">Forret</option>
+          <option value="30">Hovedret</option>
+          <option value="31">Dessert</option>
+        </select>
+      </div>
+      <div class="filterButton">
+        <button id="anvendKnap" class="button">Anvend </button>
+        <button id="filterButton" class="ButtonLowOp">Fjern filter</button>
+      </div>
       <div class="allRecipes"></div>
     </main>
     <footer>
