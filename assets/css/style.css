@@ -91,33 +91,41 @@ footer{
 .singleRecipe{
     display: grid;
     grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: repeat(3, 1fr, 0.25fr, 0.75fr);
-    margin: var(--xlSpacer);
+    grid-template-rows:3, 100%;
+    margin-left: var(--xlSpacer);
+    margin-right: var(--xlSpacer);
     gap: 20px;
+    justify-items: center;
+    border: solid red;
 }
+
 
 .singleRecipe img{
     grid-column: 1 / 7;
     grid-row: 1;
-    border: solid red;
+    height: 500px;
     width: 100%;
-    height: auto;
+    object-fit: contain;
+    aspect-ratio: (4 / 3);
 }
 
 .singleRecipe div ul {
-    border-right: solid var(--fakeBlack);
-    grid-column: 1 / 2;
+    grid-column: 1 / 1;
     grid-row: 3;
+    line-height: 30px;
+}
+
+.singleRecipe div{
+border-right: solid var(--fakeBlack);
 }
 
 .singleRecipe ol{
-    border: solid red;
-    grid-column: 3 / 7;
+    grid-column: 2 / 7;
     grid-row: 3;
+    line-height: 40px;
 }
 
 .singleRecipe h1{
-    border: solid red;
     grid-column: 1 / 7;
     grid-row: 2;
 }
