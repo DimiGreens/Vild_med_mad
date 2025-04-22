@@ -26,7 +26,7 @@ function renderSingleRecipe(data){
         newRecipeImage.src = recipe.acf.picture.sizes.large;
 
         const newRecipeTime = document.createElement("img");
-        newRecipeTime.classList.add("recipeTime");
+        newRecipeTime.classList.add("recipeTimeIcon");
         newRecipeTime.src = "./assets/img/clock.svg"
         
         const newRecipeTimeText = document.createElement("p");
@@ -37,7 +37,7 @@ function renderSingleRecipe(data){
         recipeTime.append(newRecipeTime, newRecipeTimeText);
         
         const newPortionIcon = document.createElement("img");
-        newPortionIcon.classList.add("recipePortion")
+        newPortionIcon.classList.add("recipePortionIcon")
         newPortionIcon.src = "./assets/img/users-solid.svg"
 
         const newPortionIconText = document.createElement("p");
@@ -49,6 +49,7 @@ function renderSingleRecipe(data){
 
         const newRecipeInfoBox = document.createElement("div");
         newRecipeInfoBox.append(recipeTime, recipePortion);
+        newRecipeInfoBox.classList.add("recipeDecription")
 
         const recipeDescription = document.createElement("p");
         recipeDescription.textContent = recipe.acf.description;
