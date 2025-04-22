@@ -34,8 +34,6 @@ nav {
     align-items: center;
     padding-left: var(--smSpacer);
     padding-right: var(--smSpacer);
-    
-    
 }
 
 nav a {
@@ -130,7 +128,13 @@ hr{
     margin: 0;
     line-height: 1.5;
     text-align: left;
-
+}
+.velkommenText a{
+    background-color: var(--healthyGreen);
+    color: var(--cream);
+    text-decoration: none;
+    padding: 1rem 2.5rem;
+    border-radius: 50px;
 }
 /* styling af FEP */
 .FEP{
@@ -141,14 +145,6 @@ hr{
     cursor: pointer;
     padding-left: auto;
     margin-right: auto;
-}
-.FEP figcaption{
-    display: flex;
-    justify-content: center;
-        margin-bottom: 15px;
-        font-size: 1.5rem;
-        font-weight: bold;
-        padding: 0;
 }
 .FEPsection h2{
     display: flex;
@@ -161,6 +157,15 @@ hr{
 .FEPsection a{
     text-decoration: none;
     color: var(--fakeBlack);
+}
+.FEP a{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 1rem;
+    font-size: 1.3rem;
+    font-weight: 700;
 }
 /* button styling */
 
