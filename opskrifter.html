@@ -6,54 +6,57 @@
     <title>Alle opskrifter</title>
     <link rel="stylesheet" href="./assets/css/style.css" />
     <script src="./assets/js/allRecipes.js" defer></script>
-    <script src="https://kit.fontawesome.com/92b68b791d.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/92b68b791d.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
     <header>
-            <nav class="navbar">
-              <div>
-                <img src="./assets/img/Logo.png" alt="Logo">
-                <a href="index.html">Forside</a>
-                <a href="opskrifter.html" class="active">Opskrifter</a>
-                <a href="opskriftSamling.html">Opskriftsamlinger</a>
-              </div>
-                <div class="searchBarContainer">
-                  <input type="text" placeholder="  Søg i opskrifter..">
-                  <i class="fa-solid fa-magnifying-glass"></i>
-                </div>
-            </nav>
-            <hr>
+      <nav class="navbar">
+        <div>
+          <img src="./assets/img/Logo.png" alt="Logo" />
+          <a href="index.html">Forside</a>
+          <a href="opskrifter.html" class="active">Opskrifter</a>
+          <a href="opskriftSamling.html">Opskriftsamlinger</a>
+        </div>
+        <div class="searchBarContainer">
+          <input type="text" placeholder="  Søg i opskrifter.." />
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+      </nav>
+      <hr />
     </header>
     <main>
       <section>
         <article class="velkommenText">
           <h2>Alle opskrifter</h2>
           <p>
-            Dyk ned i en verden af lækre og smagsfulde opskrifter, hvor vi lover, at du finder inspiration til dit næste måltid. Gå
-            på opdagelse i et univers fyldt med mad.
+            Dyk ned i en verden af lækre og smagsfulde opskrifter, hvor vi
+            lover, at du finder inspiration til dit næste måltid. Gå på
+            opdagelse i et univers fyldt med mad.
           </p>
         </article>
       </section>
-      <div class="pageSearchBar" >
-        <input type="text" placeholder="Søg efter opskrift">
+      <div class="pageSearchBar">
+        <input type="text" placeholder="Søg efter opskrift" />
       </div>
-      </div>
-      <br>
-      <div class="filter"> 
+      <br />
+      <div class="filter">
         <select name="Diæt" id="Diets">
           <option value="" selected>Diæt</option>
           <option value="12">Æggefri</option>
           <option value="9">Glutenfri</option>
           <option value="21">Carnivor</option>
         </select>
-  
+
         <select name="Tilbedredelsestid" id="Time">
           <option value="" selected>Tilbedredelsestid</option>
           <option value="6">Kort</option>
           <option value="7">Mellem</option>
           <option value="8">Lang</option>
         </select>
-  
+
         <select name="Type" id="Type">
           <option value="" selected>Måltidstype</option>
           <option value="29">Forret</option>
@@ -62,13 +65,13 @@
         </select>
       </div>
       <div class="filterButton">
-        <button id="anvendKnap" class="button">Anvend </button>
+        <button id="anvendKnap" class="button">Anvend</button>
         <button id="filterButton" class="ButtonLowOp">Fjern filter</button>
       </div>
       <div class="allRecipes"></div>
     </main>
     <footer>
-      <hr/>
+      <hr />
       <article class="footerText">
         <p>2025 Vild Med mad©</p>
         <p>MMD 2025</p>
