@@ -267,6 +267,16 @@ margin: auto;
     grid-row: 2;
 }
 
+.singleRecipe .recipePortion{
+    height: 100px;
+    width: 100px;
+}
+
+.singleRecipe .recipeTime{
+    width: 100px;
+    height: 100px;
+}
+
 /* grid stylinger opskrifter.html */
 
 .allRecipes {
