@@ -5,28 +5,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="./assets/css/style.css" />
-    <script src="./assets/js/app.js" defer></script>
-    <script src="https://kit.fontawesome.com/92b68b791d.js" crossorigin="anonymous"></script>
+    <script src="./assets/js/recipeCollection.js" defer></script>
+    <script
+      src="https://kit.fontawesome.com/92b68b791d.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
     <header>
-          <nav class="navbar">
-            <div>
-              <img src="./assets/img/Logo.png" alt="Logo">
-              <a href="index.html">Forside</a>
-              <a href="opskrifter.html">Opskrifter</a>
-              <a href="opskriftSamling.html" class="active">Opskriftsamlinger</a>
-            </div>
-              <div class="searchBarContainer">
-                <input type="text" placeholder="  Søg i opskrifter..">
-                <i class="fa-solid fa-magnifying-glass"></i>
-              </div>
-          </nav>
-          <hr>
+      <nav class="navbar">
+        <div>
+          <img src="./assets/img/Logo.png" alt="Logo" />
+          <a href="index.html">Forside</a>
+          <a href="opskrifter.html">Opskrifter</a>
+          <a href="opskriftSamling.html" class="active">Opskriftsamlinger</a>
+        </div>
+        <div class="searchBarContainer">
+          <input type="text" placeholder="  Søg i opskrifter.." />
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+      </nav>
+      <hr />
     </header>
-    <main></main>
-    <footer>
+    <main>
+      <div class="collectionButtons"> 
+        <button id="springCollection">
+          <a href="#"><figure><img src="assets/img/FET1.png" alt="Forårets fornøjelser">
+            <figcaption>Forårets fornøjelser</figcaption>
+          </figure></a>
+        </button>
+        <button id="easyCollection">
+          <a href="#"><figure><img src="assets/img/FET2.png" alt="Det nemme køkken">
+            <figcaption>Det nemme køkken</figcaption></a>
+        </button>
+        <button id="childfriendlyCollection">
+          <a href="#"><figure><img src="assets/img/FET3.png" alt="Børnevenligt">
+            <figcaption>Børnevenligt</figcaption>
+          </figure></a>
+        </button>
+      </div>
       <hr>
+      <div class="recipeCollections"></div>
+    </main>
+    <footer>
+      <hr />
       <article class="footerText">
         <p>2025 Vild Med mad©</p>
         <p>MMD 2025</p>

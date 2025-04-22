@@ -27,6 +27,9 @@ function renderSingleRecipe(data){
         
         const recipeIngredientList = document.createElement("ul");
         const recipeProcedure = document.createElement("ol");
+
+        const recipeList = document.createElement("div");
+        recipeList.classList.add("recipesList");
         
         recipeIngredientList.classList.add("primaryIngredienseList");
         Object.entries(recipe.acf.primary_ingredients).forEach(([key, value]) => {
@@ -41,7 +44,7 @@ function renderSingleRecipe(data){
                 recipeIngredientList.append(ingredientItem);
             }
         })
-        
+                
         const secondaryIngrediense = Object.values(recipe.acf.secondary_ingredients).some(val => val.trim() !== "");
         console.log('secondaryIngrediense:', secondaryIngrediense);
         let secondaryList;
@@ -96,17 +99,31 @@ function renderSingleRecipe(data){
             }
         })
 
-        const recipeList = document.createElement("div");
         
         if(recipeIngredientList){
+            const newPrimaryTitle = document.createElement("h2");
+            newPrimaryTitle.textContent = recipe.acf.primary_ingedients_title;
+            newPrimaryTitle.classList.add("recipeTitle");
+            recipeList.appendChild(newPrimaryTitle);
+
             recipeList.append(recipeIngredientList)
         }
 
         if(secondaryList){
-            recipeList.appendChild(secondaryList)
+            const newSeconderyTitle = document.createElement("h2");
+            newSeconderyTitle.textContent = recipe.acf.secondary_ingedients_title;
+            newSeconderyTitle.classList.add("recipeTitle");
+            recipeList.appendChild(newSeconderyTitle);
+
+            recipeList.appendChild(secondaryList);
         }
         
         if(tertiaryList){
+            const newTertiaryTitle = document.createElement("h2");
+            newTertiaryTitle.textContent = recipe.acf.tertiary_ingedients_title;
+            newTertiaryTitle.classList.add("recipeTitle");
+            recipeList.appendChild(newTertiaryTitle);
+
             recipeList.appendChild(tertiaryList)
         }
 
