@@ -78,7 +78,13 @@ function renderRecipe(data){
         <article>
         <a href="/opskrift.html?slug=${recipe.slug}">
         <img src="${recipe.acf.picture.sizes.large}" alt="">
+        <div class="recipeInfoBox">
         <h2>${recipe.acf.titel}</h2>
+        <div class="timer">
+        <img src="./assets/img/clock.svg" alt="Timer" class="timerIcon">
+        <p>${recipe.acf.tilberedningstime} min.</p>
+        </div>
+        </div>
         </a>
         </article>
         `
@@ -92,7 +98,13 @@ function renderFilteredRecipe(data){
         <article>
         <a href="/opskrift.html?slug=${recipe.slug}">
         <img src="${recipe.acf.picture.sizes.large}" alt="">
+        <div class="recipeInfoBox">
         <h2>${recipe.acf.titel}</h2>
+        <div class="timer">
+        <img src="./assets/img/clock.svg" alt="Timer" class="timerIcon">
+        <p>${recipe.acf.tilberedningstime} min.</p>
+        </div>
+        </div>
         </a>
         </article>
         `
