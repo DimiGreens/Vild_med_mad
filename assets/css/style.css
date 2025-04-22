@@ -357,6 +357,7 @@ margin: auto;
     text-decoration: none;
     color: var(--fakeBlack);
 }
+
 /* opskriftsamling a figurs  */
 .collectionButtons{
     display: flex;
@@ -365,23 +366,19 @@ margin: auto;
     flex-direction: row;
     margin-top: var(--smSpacer);
 }
-.collectionButtons figcaption{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 15px;
-    font-size: 1.5rem;
-    font-weight: bold;
-    padding: 0;
-    color: var(--fakeBlack);
-}
-.collectionButtons a{
-    text-decoration: none;
-    color: var(--fakeBlack);
-}
+
 .collectionButtons button{
     border: none;
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin: 0 1rem;
+    cursor: pointer;
 }
 .collectionButtons img{
 max-width: 17rem;
+}
+
+.collectionButtons button{
+    display: flex;
+    flex-direction: column;
 }
