@@ -24,6 +24,34 @@ function renderSingleRecipe(data){
 
         const newRecipeImage = document.createElement("img");
         newRecipeImage.src = recipe.acf.picture.sizes.large;
+
+        const newRecipeTime = document.createElement("img");
+        newRecipeTime.classList.add("recipeTime");
+        newRecipeTime.src = "./assets/img/clock.svg"
+        
+        const newRecipeTimeText = document.createElement("p");
+        newRecipeTimeText.textContent = recipe.acf.total_time;
+        
+        const recipeTime = document.createElement("div");
+        recipeTime.classList.add("recipeTime");
+        recipeTime.append(newRecipeTime, newRecipeTimeText);
+        
+        const newPortionIcon = document.createElement("img");
+        newPortionIcon.classList.add("recipePortion")
+        newPortionIcon.src = "./assets/img/users-solid.svg"
+
+        const newPortionIconText = document.createElement("p");
+        newPortionIconText.textContent = recipe.acf.antal_personer;
+
+        const recipePortion = document.createElement("div");
+        recipePortion.classList.add("recipePortion");
+        recipePortion.append(newPortionIcon, newPortionIconText)
+
+        const newRecipeInfoBox = document.createElement("div");
+        newRecipeInfoBox.append(recipeTime, recipePortion);
+
+        const recipeDescription = document.createElement("p");
+        recipeDescription.textContent = recipe.acf.description;
         
         const recipeIngredientList = document.createElement("ul");
         const recipeProcedure = document.createElement("ol");
@@ -127,7 +155,7 @@ function renderSingleRecipe(data){
             recipeList.appendChild(tertiaryList)
         }
 
-            singleRecipeEl.append(newRecipeTitel, newRecipeImage, recipeList, recipeProcedure)
+            singleRecipeEl.append(newRecipeTitel, newRecipeImage, newRecipeInfoBox, recipeDescription, recipeList, recipeProcedure)
 
     })
 }

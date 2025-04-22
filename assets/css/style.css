@@ -158,6 +158,10 @@ hr{
 .FEPsection img{
     max-width: 17rem;
 }
+.FEPsection a{
+    text-decoration: none;
+    color: var(--fakeBlack);
+}
 /* button styling */
 
 /* Footer */
@@ -271,6 +275,16 @@ margin: auto;
 .singleRecipe h1{
     grid-column: 1 / 7;
     grid-row: 2;
+}
+
+.singleRecipe .recipePortion{
+    height: 100px;
+    width: 100px;
+}
+
+.singleRecipe .recipeTime{
+    width: 100px;
+    height: 100px;
 }
 
 /* grid stylinger opskrifter.html */
