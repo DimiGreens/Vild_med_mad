@@ -152,6 +152,10 @@ hr{
 .FEPsection img{
     max-width: 17rem;
 }
+.FEPsection a{
+    text-decoration: none;
+    color: var(--fakeBlack);
+}
 /* button styling */
 
 /* Footer */
