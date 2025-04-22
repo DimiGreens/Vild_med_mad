@@ -127,7 +127,7 @@ header hr{
 
 }
 /* styling af FET */
-.FET{
+.FEP{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -136,7 +136,7 @@ header hr{
     padding-left: auto;
     margin-right: auto;
 }
-.FET figcaption{
+.FEP figcaption{
     display: flex;
     justify-content: center;
         margin-bottom: 15px;
@@ -144,7 +144,7 @@ header hr{
         font-weight: bold;
         padding: 0;
 }
-.FETsection h2{
+.FEPsection h2{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -166,13 +166,13 @@ footer{
     color: white;
     padding-left: var(--lrgSpacer);
     padding-right: var(--lrgSpacer);
-    padding-top: var(--smSpacer);
-    padding-bottom: var(--smSpacer);
+    padding-top: 1rem;
+    padding-bottom: 1rem;
     cursor: pointer;
     border-radius: 10rem;
     font-size: var(--smSpacer);
     align-items: center;
-    margin-top: var(--mdSpacer);
+    margin-top: var(--smSpacer);
     max-width: 20rem;
 }
 .ButtonLowOp{
@@ -186,8 +186,7 @@ footer{
             border-radius: 10rem;
             font-size: 1.5rem;
             /* align-items: center; */
-            margin-top: var(--mdSpacer);
-            margin-bottom: var(--xlSpacer);
+            margin-top: var(--smSpacer);
             max-width: 15rem;
 
 }
@@ -204,11 +203,12 @@ select{
     width: 20%;
     text-align: center;
     cursor: pointer;
+    margin: 1rem;
 }
 .filter{
     text-align: center;
 }
-/* on page seach styling */
+/* on page seach styling i opskrifter */
 .pageSearchBar{
 display: flex;
 justify-content: center;
@@ -250,8 +250,6 @@ margin: auto;
     line-height: 30px;
 }
 
-
-
 .singleRecipe ol{
     border-left: solid var(--fakeBlack);
     grid-column: 2 / 7;
@@ -265,8 +263,6 @@ margin: auto;
 }
 
 /* grid stylinger opskrifter.html */
-
-
 
 .allRecipes {
    display: grid;
@@ -308,4 +304,31 @@ margin: auto;
     text-decoration: none;
     color: var(--fakeBlack);
 }
-
+/* opskriftsamling a figurs  */
+.collectionButtons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    margin-top: var(--smSpacer);
+}
+.collectionButtons figcaption{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 0;
+    color: var(--fakeBlack);
+}
+.collectionButtons a{
+    text-decoration: none;
+    color: var(--fakeBlack);
+}
+.collectionButtons button{
+    border: none;
+}
+.collectionButtons img{
+max-width: 80%;
+}
