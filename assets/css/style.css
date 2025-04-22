@@ -96,6 +96,12 @@ header hr{
     margin-left: var(--smSpacer);
     margin-right: var(--smSpacer);
 }
+/* breadcrumbs */
+
+.breadCrumbs{
+    color: var(--fakeBlack);
+}
+
 /* forside hero og velkommen tekst */
 #Hero{
     display: flex;
