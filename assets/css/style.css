@@ -288,6 +288,23 @@ margin: auto;
     color: var(--fakeBlack);
 }
 
+.allRecipes .timerIcon{
+    width: 1rem;
+    height: 1rem;
+    margin-right: 0.5rem;
+}
+
+.recipeInfoBox{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.allRecipes .timer{
+    display: flex;
+    align-items: center;
+}
+
 
 /* generel styling i opskrift samlinger */
 
@@ -303,6 +320,17 @@ margin: auto;
     width: 100%;
     height: auto;
     object-fit: contain;
+}
+
+.recipeCollections .timerIcon{
+    height: 1rem;
+    width: 1rem;
+    margin-right: 0.5rem;
+}
+
+.recipeCollections .timer{
+    display: flex;
+    align-items: center;
 }
 
 .recipeCollections a{
