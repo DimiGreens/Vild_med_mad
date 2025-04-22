@@ -136,6 +136,10 @@ hr{
     padding: 1rem 2.5rem;
     border-radius: 50px;
 }
+
+.velkommenText p{
+    margin-bottom: 2rem;
+}
 /* styling af FEP */
 .FEP{
     display: flex;
