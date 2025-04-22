@@ -44,7 +44,7 @@ function renderCollection(data){
     data.forEach(recipe => {
         recipeCollectionEl.innerHTML += `
         <article>
-        <a href="/opskrift.html?slug=${recipe.slug}">
+        <a href="opskrift.html?slug=${recipe.slug}">
         <img src="${recipe.acf.picture.sizes.large}" alt="">
         <div class="recipeInfoBox">
         <h2>${recipe.acf.titel}</h2>
